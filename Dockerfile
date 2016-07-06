@@ -4,8 +4,8 @@ FROM debian:latest
 MAINTAINER Alexandre MALDÉMÉ
 
 # Packages
-RUN apt-get update
-RUN apt-get install -y openvpn iptables iptables-persistent
+RUN apt-get update \
+    && apt-get install -y openvpn iptables iptables-persistent
 
 WORKDIR /etc/openvpn/easy-rsa
 
